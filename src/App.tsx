@@ -1,10 +1,14 @@
-import './styles/theme.css'
-import './styles/globals.css'
-import { Heading } from './components/Heading.tsx'
+import "./styles/theme.css";
+import "./styles/globals.css";
+import { Container } from "./components/Container";
+import { Logo } from "./components/Logo";
+
 export function App() {
-  return(
+  return (
     <>
-      <Heading>Pomodoro</Heading>
-    </>    
-  )
+      <Container>
+        <Logo />
+      </Container>
+    </>
+  );
 }
