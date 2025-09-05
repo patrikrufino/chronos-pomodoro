@@ -4,7 +4,7 @@ import { Heading } from './components/Heading.tsx'
 export function App() {
   return(
     <>
-      <Heading />
+      <Heading>Pomodoro</Heading>
     </>    
   )
 }
