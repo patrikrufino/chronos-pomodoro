@@ -5,8 +5,7 @@ import type { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../templates/MainTemplate";
 
 type HomeProps = {
-  state: TaskStateModel;
-  setState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
+  state?: TaskStateModel;
 };
 
 export function Home(props: HomeProps) {
