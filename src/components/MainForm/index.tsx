@@ -7,6 +7,7 @@ import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
 import { formatSecondToMinute } from "../../utils/formatSecondToMinute";
+import { Cycles } from "../cycles";
 
 export function MainForm() {
   const { state, setState } = useTaskContext();
@@ -54,14 +55,16 @@ export function MainForm() {
           placeholder="Coloque sua tarefa aqui"
           label="Tarefa"
           ref={taskNameInput}
+          disabled={!!state.activeTask}
         />
         <div className="formRow">
           <p>Próximo intervalor é de 25 minutos.</p>
         </div>{" "}
-        <div className="formRow">
-          <p>Ciclos:</p>
-          <p>0 - 0 - 0 - 0 </p>
-        </div>
+        {state.currentCycle > 0 && (
+          <div className="formRow">
+            <Cycles />
+          </div>
+        )}
         <div className="formRow">
           <DefaultButton icon={<PlayCircleIcon />} />
         </div>
