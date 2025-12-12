@@ -1,24 +1,17 @@
 import { Container } from "../../components/Container";
 import { CountDown } from "../../components/CountDown";
 import { MainForm } from "../../components/MainForm";
-import type { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../templates/MainTemplate";
 
-type HomeProps = {
-  state?: TaskStateModel;
-};
-
-export function Home(props: HomeProps) {
+export function Home() {
   return (
-    <>
-      <MainTemplate>
-        <Container>
-          <CountDown />
-        </Container>
-        <Container>
-          <MainForm />
-        </Container>
-      </MainTemplate>
-    </>
+    <MainTemplate>
+      <Container>
+        <CountDown />
+      </Container>
+      <Container>
+        <MainForm />
+      </Container>
+    </MainTemplate>
   );
 }
