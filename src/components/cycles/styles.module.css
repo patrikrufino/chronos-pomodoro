@@ -6,7 +6,7 @@
   gap: 1.6rem;
 }
 
-.cycleDots {
+.cycleDots { 
   display: flex;
   gap: 0.8rem;
 }
