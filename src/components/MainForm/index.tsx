@@ -39,7 +39,7 @@ export function MainForm() {
       duration: state.config[nextCyleType],
       type: nextCyleType,
     };
-
+    
     dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
   }
 
